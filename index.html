@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width user-scalable=no">
+        <title>Metronome</title>
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-git2.js"></script>
+        <script type="text/javascript" src="js/metronome.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+        <div id="controls">
+            <div>
+                <a id="play">play</a>
+            </div>
+            <div id="tempoBox">
+                <p>Tempo: <span id="showTempo">120</span>BPM</p>
+                <input id="tempo" type="range" min="30.0" max="160.0" step="1" value="120">
+            </div>
+        </div>
+        
+        <div id="container">
+            <canvas id="metronome" width="1200" height="320"></canvas>
+        </div>
+        
+   </body>
+</html>

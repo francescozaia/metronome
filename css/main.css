@@ -1,0 +1,52 @@
+#controls {
+	font-family:arial;
+	font-size:24px;
+	font-weight:bold;
+	margin: 15px;
+}
+
+#controls * {
+	margin: 5px;
+	display:inline-block;
+	
+}
+
+#showTempo { 
+	display: inline-block;
+	width: 45px; 
+}
+
+#showSwing { 
+	display: inline-block;
+	width: 40px; 
+}
+
+* {
+    -webkit-user-select: none;
+}
+
+body, html {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+body {
+    overflow: auto;
+}
+
+input#tempo {
+	height: 20px; width: 200px
+}
+
+#container {
+	width: 320px;
+	height: 320px;
+}
+
+#grid div {
+	transition: background-color .2s ease-in-out;
+	-moz-transition: background-color .2s ease-in-out;
+	-webkit-transition: background-color .2s ease-in-out; 
+	-o-transition: background-color .2s ease-in-out;
+	cursor: pointer;
+}
