@@ -125,6 +125,8 @@ var Metronome = (function($, window, undefined){
         });
         grid.show();
 
+        
+
         requestAnimFrame(draw);
     }
 
@@ -155,17 +157,11 @@ var Metronome = (function($, window, undefined){
 
         finalMatrix[_beatNumber].forEach(function(freq) {
             var output = audioContext.createOscillator();
-            var compressor = audioContext.createDynamicsCompressor();
-        var reverb = audioContext.createConvolver();
-        var volume = audioContext.createGainNode();
-            output.connect(compressor);
-        compressor.connect(reverb);
-        reverb.connect(volume);
-        volume.connect(audioContext.destination);
             output.frequency.value = freq;
             output.connect(audioContext.destination);
             output.noteOn(_time);
             output.noteOff(_time + options["noteLength"]); //+ d.delayValue);
+
         });
 
         
