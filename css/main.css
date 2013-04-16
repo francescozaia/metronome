@@ -1,8 +1,13 @@
-#controls {
-	font-family:arial;
-	font-size:24px;
-	font-weight:bold;
-	margin: 15px;
+body, html {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+body {
+    overflow: auto;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 }
 
 #controls * {
@@ -25,17 +30,10 @@
     -webkit-user-select: none;
 }
 
-body, html {
-    margin: 0;
-    height: 100%;
-    position: relative;
-}
-body {
-    overflow: auto;
-}
+
 
 input#tempo {
-	height: 20px; width: 200px
+	height: 20px; width: 100px
 }
 
 #container {

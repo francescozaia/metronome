@@ -110,23 +110,21 @@ var Metronome = (function($, window, undefined){
                 // pop dell'elemento selezionato (se c'è);
                 var index = finalMatrix[whichColumn].indexOf(noteMatrix[whichRow]);
                 finalMatrix[whichColumn].splice(index, 1);
-                console.log("popping note " + noteMatrix[whichRow] + " into column " + whichColumn)  
-
+                console.log("popping note " + noteMatrix[whichRow] + " into column " + whichColumn);
             } else {
                 $(this).css("backgroundColor", "#FF0000");
                 $(this).data("test").selected = true;
                 var whichColumn = $(this).data("test").col;
                 var whichRow = $(this).data("test").row;
                 finalMatrix[whichColumn].push(noteMatrix[whichRow]);
-                console.log("pushing note " + noteMatrix[whichRow] + " into column " + whichColumn)  
+                console.log("pushing note " + noteMatrix[whichRow] + " into column " + whichColumn); 
             }
-            
             //alert($(this).data("test").i + ", " + $(this).data("test").j);
         });
+
+            
         grid.show();
-
-        
-
+        $("#grid div:first-child").trigger("click");
         requestAnimFrame(draw);
     }
 
@@ -161,7 +159,6 @@ var Metronome = (function($, window, undefined){
             output.connect(audioContext.destination);
             output.noteOn(_time);
             output.noteOff(_time + options["noteLength"]); //+ d.delayValue);
-
         });
 
         
