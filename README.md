@@ -3,4 +3,4 @@ metronome
 
 A project about Web Audio APIs
 
-Ref: http://www.francescozaia.com/dev/metronome
+Result here: http://www.francescozaia.com/dev/metronome
