@@ -1,6 +1,4 @@
 metronome
 =========
 
-A project about Web Audio APIs
-
-Result here: http://www.francescozaia.com/dev/metronome
+A little project with Web Audio APIs
