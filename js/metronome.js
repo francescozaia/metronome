@@ -72,7 +72,7 @@ var Metronome = (function($, window, undefined){
         $("#metronome").height = canvasHeight;
         canvasContext = $("#metronome")[0].getContext( '2d' );
 
-        audioContext = new webkitAudioContext();
+        audioContext = new AudioContext();
 
 
         var grid = $('<div></div>').attr("id","grid").hide();
@@ -157,8 +157,8 @@ var Metronome = (function($, window, undefined){
             var output = audioContext.createOscillator();
             output.frequency.value = freq;
             output.connect(audioContext.destination);
-            output.noteOn(_time);
-            output.noteOff(_time + options["noteLength"]); //+ d.delayValue);
+            output.start(_time);
+            output.stop(_time + options["noteLength"]); //+ d.delayValue);
         });
 
         
